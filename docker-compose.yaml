@@ -1,0 +1,13 @@
+version: '2'
+services:
+  terraform:
+    image: ibmterraform/terraform-provider-ibm-docker:latest
+    container_name: terraform
+    volumes:
+      - ./src:/go/src
+    env_file:
+      - credentials.env
+    command: /bin/bash
+    stdin_open: true
+    tty: true
+    working_dir: /go/src
