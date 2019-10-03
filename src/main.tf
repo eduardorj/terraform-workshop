@@ -9,7 +9,7 @@ resource "ibm_compute_ssh_key" "temp_public_key" {
 
 resource "ibm_compute_vm_instance" "softlayer_virtual_guest" {
   hostname                 = "${var.hostname}"
-  os_reference_code        = "CENTOS_7_64"
+  os_reference_code        = "UBUNTU_18_64"
   domain                   = "ed.blog.br"
   datacenter               = "wdc01"
   network_speed            = 10
@@ -32,6 +32,12 @@ resource "ibm_compute_vm_instance" "softlayer_virtual_guest" {
   provisioner "remote-exec" {
     inline = [
       "echo \"root:${var.password}\" | chpasswd",
+      "apt-get update",
+      "apt-get install python ansible -y",
+      "echo \"[apache]\" >> /etc/ansible/hosts",
+      "echo $(/sbin/ip -o -4 addr list eth1 | awk '{print $4}' | cut -d/ -f1) >> /etc/ansible/hosts",
+      "git clone https://github.com/eduardorj/ansible-apache.git",
+      "ansible-playbook ./ansible-apache/apache.yaml --connection=local",
     ]
   }
 }
