@@ -42,6 +42,6 @@ resource "ibm_compute_vm_instance" "softlayer_virtual_guest" {
   }
 }
 
-output "The IP address of your server is:" {
+output "ip" {
   value = "${ibm_compute_vm_instance.softlayer_virtual_guest.ipv4_address}"
 }
