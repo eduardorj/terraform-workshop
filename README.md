@@ -1,4 +1,4 @@
-# Infraestrturua como código com Terraform e Ansible (lab)
+# Infraestrutura como código com Terraform e Ansible (lab)
 
 Agora que você entendeu o que é **Terraform** e como **IaC** (infraestrutura como código) pode ajudar no seu dia a dia, é hora de colocar a mão na massa!
 
