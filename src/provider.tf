@@ -1,3 +1,1 @@
-provider "ibm" {
-# Empty. 
-}
+provider "ibm" {}
