@@ -1,11 +1,11 @@
-resource "tls_private_key" "ssh" {
-  algorithm = "RSA"
-}
+#resource "tls_private_key" "ssh" {
+#  algorithm = "RSA"
+#}
 
-resource "ibm_compute_ssh_key" "temp_public_key" {
-  label      = "Temp Public Key"
-  public_key = "${tls_private_key.ssh.public_key_openssh}"
-}
+#resource "ibm_compute_ssh_key" "temp_public_key" {
+#  label      = "Temp Public Key"
+#  public_key = "${tls_private_key.ssh.public_key_openssh}"
+#}
 
 resource "ibm_compute_vm_instance" "softlayer_virtual_guest" {
   hostname                 = "${var.hostname}"
@@ -20,7 +20,7 @@ resource "ibm_compute_vm_instance" "softlayer_virtual_guest" {
   disks                    = [25]
   dedicated_acct_host_only = false
   local_disk               = false
-  ssh_key_ids              = ["${ibm_compute_ssh_key.temp_public_key.id}"]
+  #ssh_key_ids              = ["${ibm_compute_ssh_key.temp_public_key.id}"]
 
   # Specify the ssh connection
   connection {
