@@ -2,7 +2,7 @@
 
 Agora que você entendeu o que é **Terraform** e como **IaC** (infraestrutura como código) pode ajudar no seu dia a dia, é hora de colocar a mão na massa!
 
-Neste LAB vamos usar um projeto Terraform para provisionar uma máquina virtual na **IBM Cloud**, instalar e configurar um servidor Apache. Tudo isso com o menor esforço possível ?:-) Ahh... já ia esquecendo, para instalar e configurar o servidor apache vamos usar um playbook **Ansbile**.
+Neste LAB vamos usar um projeto Terraform para provisionar uma máquina virtual na **IBM Cloud**, instalar e configurar um servidor Apache. Tudo isso com o menor esforço possível! :-) Ahh... Já ia esquecendo, para instalar e configurar o servidor apache vamos usar um playbook **Ansbile**.
 
 Navegue até este endereço http://ibm.biz/terraform-lab e faça o downloads dos assets abaixo:
 
