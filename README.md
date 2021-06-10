@@ -11,3 +11,5 @@ Navegue até este endereço http://ibm.biz/terraform-lab e faça o downloads dos
 - **VirtualBox-6.0.12-133076-Win.exe** - Instalação do VirtualBox para windows;
 - **VirtualBox-6.0.12-133076-OSX.dmg** - Instalação do VirtualBox para MacOS;
 
+
+<div class="badge-base LI-profile-badge" data-locale="pt_BR" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="eduardofrancellino" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://br.linkedin.com/in/eduardofrancellino?trk=profile-badge">Eduardo Francellino</a></div>
