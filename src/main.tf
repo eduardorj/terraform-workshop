@@ -1,10 +1,10 @@
 terraform {
-  required_providers {
-    ibm = {
-      source  = "localdomain/provider/ibm"
-      version = "1.10.0"
-    }
-  }
+ required_providers {
+   ibm = {
+     source  = "localdomain/provider/ibm"
+     version = "1.10.0"
+   }
+ }
 }
 
 resource "tls_private_key" "ssh" {
@@ -32,6 +32,8 @@ resource "ibm_compute_vm_instance" "debian_small_virtual_guest" {
   dedicated_acct_host_only = false
   local_disk               = false
   ssh_key_ids              = ["${ibm_compute_ssh_key.temp_public_key.id}"]
+  private_security_group_ids  = ["1066361","1066367","1066369"]
+  
 
  # Specify the ssh connection
   connection {
@@ -51,6 +53,8 @@ resource "ibm_compute_vm_instance" "debian_small_virtual_guest" {
       "ansible-playbook ./ansible-playbooks/apache.yaml --connection=local",
     ]
   }
+
+
 }
 
 output "vm_ip" {
