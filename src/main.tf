@@ -25,7 +25,7 @@ resource "ibm_compute_vm_instance" "debian_small_virtual_guest" {
   network_speed            = 10
   hourly_billing           = true
   private_network_only     = false
-  cores                    = 1
+  cores                    = 2
   memory                   = 1024
   disks                    = [25, 10, 20]
   user_metadata            = "{\"value\":\"newvalue\"}"
