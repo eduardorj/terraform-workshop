@@ -1,7 +1,8 @@
 version: '2'
 services:
   terraform:
-    image: ibmterraform/terraform-provider-ibm-docker:latest
+    #image: ubuntu:latest
+    build: .
     container_name: terraform
     volumes:
       - ./src:/go/src
